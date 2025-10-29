@@ -3,7 +3,7 @@
 
 # BAKKOURY Salma
 
-<img src="Test Image 1.jpg" style="height:400px;margin-right:420px"/>
+<img src="Test Image 1.jpg" style="height:200px;margin-right:150px"/>
 ---
 
 # PARTIE 1 : FONDAMENTAUX DE LA SCIENCE DES DONNÉES
