@@ -1,6 +1,10 @@
 # 📊 RAPPORT D'ANALYSE DU PIB MONDIAL 2024
-## Analyse Économique des 20 Premières Puissances Mondiales
 
+# BAKKOURY Salma 
+
+
+## Analyse Économique des 20 Premières Puissances Mondiales
+ 
 ---
 
 **Date du rapport :** Octobre 2024  
