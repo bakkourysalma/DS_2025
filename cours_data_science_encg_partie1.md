@@ -1,9 +1,7 @@
 
 # COURS DE SCIENCE DES DONNÉES
 
-<img src="SETTAT.png" style="height:100px;margin-right:95px"/>
-
-## École Nationale de Commerce et de Gestion (ENCG) - 4ème Année
+<img src="SETTAT.png" style="height:100px;margin-right:95px"/>   ## École Nationale de Commerce et de Gestion (ENCG) - 4ème Année
 
 # BAKKOURY Salma
 
