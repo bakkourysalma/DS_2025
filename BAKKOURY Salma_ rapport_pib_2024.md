@@ -1,3 +1,5 @@
+<img src="SETTAT.png" style="height:100px;margin-right:95px"/> 
+
 # 📊 RAPPORT D'ANALYSE DU PIB MONDIAL 2024
 
 # BAKKOURY Salma 
