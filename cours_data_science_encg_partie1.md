@@ -2,6 +2,8 @@
 ## École Nationale de Commerce et de Gestion (ENCG) - 4ème Année
 
 # BAKKOURY Salma
+
+<img src="Test Image 1.jpg" style="height:464px;margin-right:432px"/>
 ---
 
 # PARTIE 1 : FONDAMENTAUX DE LA SCIENCE DES DONNÉES
