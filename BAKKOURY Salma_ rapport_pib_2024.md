@@ -2,6 +2,7 @@
 
 # BAKKOURY Salma 
 
+<img src="Test Image 1.jpg" style="height:200px;margin-right:150px"/>
 
 ## Analyse Économique des 20 Premières Puissances Mondiales
  
