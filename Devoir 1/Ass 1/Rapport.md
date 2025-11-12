@@ -94,11 +94,11 @@ plt.show()
 
 ## Graphiques 
 
-  <img src="Graphique ASS1.png" style="height:400px;margin-right:250px"/>
-  <img src="Graphique ASS2.png" style="height:400px;margin-right:250px"/> 
-  <img src="Graphique ASS3.png" style="height:400px;margin-right:250px"/>
-  <img src="Graphique ASS4.png" style="height:400px;margin-right:250px"/>
-  <img src="Graphique ASS5.png" style="height:400px;margin-right:250px"/>
+  <img src="Graphique ASS1.png" style="height:500px;margin-right:350px"/>
+  <img src="Graphique ASS2.png" style="height:500px;margin-right:350px"/> 
+  <img src="Graphique ASS3.png" style="height:500px;margin-right:350px"/>
+  <img src="Graphique ASS4.png" style="height:500px;margin-right:350px"/>
+  <img src="Graphique ASS5.png" style="height:500px;margin-right:350px"/>
 
 ### 5. Intérêt analytique et applications
 Cette base permet de réaliser plusieurs analyses :
