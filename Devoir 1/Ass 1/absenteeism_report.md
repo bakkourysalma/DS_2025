@@ -1,10 +1,3 @@
-# BAKKOURY Salma 
-
-<img src="Photo salma.jpg" style="height:200px;margin-right:150px"/>
-
-# Étudiante en 4ᵉ année à l’ENCG Settat – filière Contrôle, Audit et Conseil .
-
-
 ## Thème du projet :
 **Analyse des facteurs d’absentéisme au travail à partir de la base de données “Absenteeism at Work”**
 
