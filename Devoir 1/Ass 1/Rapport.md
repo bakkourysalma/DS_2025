@@ -27,6 +27,12 @@ Le jeu de données comprend environ **740 enregistrements** et **21 variables**.
 - **Variables logistiques et temporelles :** mois, saison, jour de la semaine, distance domicile-travail, dépenses de transport.
 - **Variable cible :** *Absenteeism time in hours*, durée totale de l’absence.
 - **Autres variables :** raison de l’absence (codée selon une classification médicale).
+## Graphiques 
+  <img src="Graphique ASS1.png" style="height:200px;margin-right:150px"/>
+  <img src="Graphique ASS2.png" style="height:200px;margin-right:150px"/> 
+  <img src="Graphique ASS3.png" style="height:200px;margin-right:150px"/>
+  <img src="Graphique ASS4.png" style="height:200px;margin-right:150px"/>
+  <img src="Graphique ASS5.png" style="height:200px;margin-right:150px"/>
 
 ### 5. Intérêt analytique et applications
 Cette base permet de réaliser plusieurs analyses :
