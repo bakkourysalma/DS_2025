@@ -28,6 +28,7 @@ Le jeu de données comprend environ **740 enregistrements** et **21 variables**.
 - **Variable cible :** *Absenteeism time in hours*, durée totale de l’absence.
 - **Autres variables :** raison de l’absence (codée selon une classification médicale).
 ## Graphiques 
+
   <img src="Graphique ASS1.png" style="height:200px;margin-right:150px"/>
   <img src="Graphique ASS2.png" style="height:200px;margin-right:150px"/> 
   <img src="Graphique ASS3.png" style="height:200px;margin-right:150px"/>
