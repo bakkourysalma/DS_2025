@@ -1,4 +1,6 @@
-<img src="SETTAT.png" style="height:100px;margin-right:95px"/>   
+<img src="SETTAT.png" style="height:100px;margin-right:95px"/>  
+
+
 ## Thème du projet :
 **Analyse des facteurs d’absentéisme au travail à partir de la base de données “Absenteeism at Work”**
 
