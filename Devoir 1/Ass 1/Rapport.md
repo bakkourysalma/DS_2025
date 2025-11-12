@@ -29,68 +29,68 @@ Le jeu de données comprend environ **740 enregistrements** et **21 variables**.
 - **Autres variables :** raison de l’absence (codée selon une classification médicale).
 - 
 ### Code python  
-
-&lt;span style='color:#696969; '&gt;# Importation des bibliothèques&lt;/span&gt;
+```python
+# Importation des bibliothèques
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-&lt;span style='color:#696969; '&gt;# Chargement de la base de données&lt;/span&gt;
-&lt;span style='color:#696969; '&gt;# Remplacez 'Absenteeism_at_work.csv' par le chemin de ton fichier&lt;/span&gt;
-df &lt;span style='color:#808030; '&gt;=&lt;/span&gt; pd.concat([X&lt;span style='color:#808030; '&gt;,&lt;/span&gt; y]&lt;span style='color:#808030; '&gt;,&lt;/span&gt; axis=&lt;span style='color:#008c00; '&gt;1&lt;/span&gt;)
+# Chargement de la base de données
+# Remplacez 'Absenteeism_at_work.csv' par le chemin de ton fichier
+df = pd.concat([X, y], axis=1)
 
-&lt;span style='color:#696969; '&gt;# Aperçu des données&lt;/span&gt;
+# Aperçu des données
 print(df.head())
 print(df.info())
 
-&lt;span style='color:#696969; '&gt;# -----------------------------&lt;/span&gt;
-&lt;span style='color:#696969; '&gt;# 1. Histogramme de l'absentéisme (durée en heures)&lt;/span&gt;
-plt.figure(figsize&lt;span style='color:#808030; '&gt;=&lt;/span&gt;(&lt;span style='color:#008c00; '&gt;8&lt;/span&gt;&lt;span style='color:#808030; '&gt;,&lt;/span&gt;&lt;span style='color:#008c00; '&gt;5&lt;/span&gt;))
-sns.histplot(df[&lt;span style='color:#0000e6; '&gt;'Absenteeism time in hours'&lt;/span&gt;]&lt;span style='color:#808030; '&gt;,&lt;/span&gt; bins&lt;span style='color:#808030; '&gt;=&lt;/span&gt;&lt;span style='color:#008c00; '&gt;30&lt;/span&gt;&lt;span style='color:#808030; '&gt;,&lt;/span&gt; kde=True&lt;span style='color:#808030; '&gt;,&lt;/span&gt; color=&lt;span style='color:#0000e6; '&gt;'skyblue'&lt;/span&gt;)
-plt.title(&lt;span style='color:#0000e6; '&gt;'Distribution de la durée des absences (heures)'&lt;/span&gt;)
-plt.xlabel(&lt;span style='color:#0000e6; '&gt;'Durée d\'&lt;/span&gt;absence (heures)&lt;span style='color:#0000e6; '&gt;')&lt;/span&gt;
-plt.ylabel(&lt;span style='color:#0000e6; '&gt;'Nombre d\'&lt;/span&gt;absences&lt;span style='color:#0000e6; '&gt;')&lt;/span&gt;
+# -----------------------------
+# 1. Histogramme de l'absentéisme (durée en heures)
+plt.figure(figsize=(8,5))
+sns.histplot(df['Absenteeism time in hours'], bins=30, kde=True, color='skyblue')
+plt.title('Distribution de la durée des absences (heures)')
+plt.xlabel('Durée d\'absence (heures)')
+plt.ylabel('Nombre d\'absences')
 plt.show()
 
-&lt;span style='color:#696969; '&gt;# -----------------------------&lt;/span&gt;
-&lt;span style='color:#696969; '&gt;# 2. Absences par raison (Reason for absence)&lt;/span&gt;
-plt.figure(figsize&lt;span style='color:#808030; '&gt;=&lt;/span&gt;(&lt;span style='color:#008c00; '&gt;12&lt;/span&gt;&lt;span style='color:#808030; '&gt;,&lt;/span&gt;&lt;span style='color:#008c00; '&gt;6&lt;/span&gt;))
-sns.countplot(&lt;span style='color:#800000; font-weight:bold; '&gt;data&lt;/span&gt;&lt;span style='color:#808030; '&gt;=&lt;/span&gt;df&lt;span style='color:#808030; '&gt;,&lt;/span&gt; x=&lt;span style='color:#0000e6; '&gt;'Reason for absence'&lt;/span&gt;&lt;span style='color:#808030; '&gt;,&lt;/span&gt; palette=&lt;span style='color:#0000e6; '&gt;'Set2'&lt;/span&gt;&lt;span style='color:#808030; '&gt;,&lt;/span&gt; hue=&lt;span style='color:#0000e6; '&gt;'Reason for absence'&lt;/span&gt;&lt;span style='color:#808030; '&gt;,&lt;/span&gt; legend=False)
-plt.title(&lt;span style='color:#0000e6; '&gt;'Nombre d\'&lt;/span&gt;absences selon la raison&lt;span style='color:#0000e6; '&gt;')&lt;/span&gt;
-plt.xlabel(&lt;span style='color:#0000e6; '&gt;'Raison de l\'&lt;/span&gt;absence&lt;span style='color:#0000e6; '&gt;')&lt;/span&gt;
-plt.ylabel(&lt;span style='color:#0000e6; '&gt;'Nombre d\'&lt;/span&gt;absences&lt;span style='color:#0000e6; '&gt;')&lt;/span&gt;
-plt.xticks(rotation&lt;span style='color:#808030; '&gt;=&lt;/span&gt;&lt;span style='color:#008c00; '&gt;45&lt;/span&gt;)
+# -----------------------------
+# 2. Absences par raison (Reason for absence)
+plt.figure(figsize=(12,6))
+sns.countplot(data=df, x='Reason for absence', palette='Set2', hue='Reason for absence', legend=False)
+plt.title('Nombre d\'absences selon la raison')
+plt.xlabel('Raison de l\'absence')
+plt.ylabel('Nombre d\'absences')
+plt.xticks(rotation=45)
 plt.show()
 
-&lt;span style='color:#696969; '&gt;# -----------------------------&lt;/span&gt;
-&lt;span style='color:#696969; '&gt;# 3. Absences par mois&lt;/span&gt;
-plt.figure(figsize&lt;span style='color:#808030; '&gt;=&lt;/span&gt;(&lt;span style='color:#008c00; '&gt;10&lt;/span&gt;&lt;span style='color:#808030; '&gt;,&lt;/span&gt;&lt;span style='color:#008c00; '&gt;5&lt;/span&gt;))
-sns.countplot(&lt;span style='color:#800000; font-weight:bold; '&gt;data&lt;/span&gt;&lt;span style='color:#808030; '&gt;=&lt;/span&gt;df&lt;span style='color:#808030; '&gt;,&lt;/span&gt; x=&lt;span style='color:#0000e6; '&gt;'Month of absence'&lt;/span&gt;&lt;span style='color:#808030; '&gt;,&lt;/span&gt; palette=&lt;span style='color:#0000e6; '&gt;'Set3'&lt;/span&gt;&lt;span style='color:#808030; '&gt;,&lt;/span&gt; hue=&lt;span style='color:#0000e6; '&gt;'Month of absence'&lt;/span&gt;&lt;span style='color:#808030; '&gt;,&lt;/span&gt; legend=False)
-plt.title(&lt;span style='color:#0000e6; '&gt;'Répartition des absences par mois'&lt;/span&gt;)
-plt.xlabel(&lt;span style='color:#0000e6; '&gt;'Mois'&lt;/span&gt;)
-plt.ylabel(&lt;span style='color:#0000e6; '&gt;'Nombre d\'&lt;/span&gt;absences&lt;span style='color:#0000e6; '&gt;')&lt;/span&gt;
+# -----------------------------
+# 3. Absences par mois
+plt.figure(figsize=(10,5))
+sns.countplot(data=df, x='Month of absence', palette='Set3', hue='Month of absence', legend=False)
+plt.title('Répartition des absences par mois')
+plt.xlabel('Mois')
+plt.ylabel('Nombre d\'absences')
 plt.show()
 
-&lt;span style='color:#696969; '&gt;# -----------------------------&lt;/span&gt;
-&lt;span style='color:#696969; '&gt;# 4. Boxplot de l'absentéisme par âge&lt;/span&gt;
-plt.figure(figsize&lt;span style='color:#808030; '&gt;=&lt;/span&gt;(&lt;span style='color:#008c00; '&gt;10&lt;/span&gt;&lt;span style='color:#808030; '&gt;,&lt;/span&gt;&lt;span style='color:#008c00; '&gt;5&lt;/span&gt;))
-sns.boxplot(x&lt;span style='color:#808030; '&gt;=&lt;/span&gt;&lt;span style='color:#0000e6; '&gt;'Age'&lt;/span&gt;&lt;span style='color:#808030; '&gt;,&lt;/span&gt; y=&lt;span style='color:#0000e6; '&gt;'Absenteeism time in hours'&lt;/span&gt;&lt;span style='color:#808030; '&gt;,&lt;/span&gt; data=df&lt;span style='color:#808030; '&gt;,&lt;/span&gt; palette=&lt;span style='color:#0000e6; '&gt;'Pastel1'&lt;/span&gt;&lt;span style='color:#808030; '&gt;,&lt;/span&gt; hue=&lt;span style='color:#0000e6; '&gt;'Age'&lt;/span&gt;&lt;span style='color:#808030; '&gt;,&lt;/span&gt; legend=False)
-plt.title(&lt;span style='color:#0000e6; '&gt;'Durée des absences selon l\'&lt;/span&gt;âge&lt;span style='color:#0000e6; '&gt;')&lt;/span&gt;
-plt.xlabel(&lt;span style='color:#0000e6; '&gt;'Âge'&lt;/span&gt;)
-plt.ylabel(&lt;span style='color:#0000e6; '&gt;'Durée d\'&lt;/span&gt;absence (heures)&lt;span style='color:#0000e6; '&gt;')&lt;/span&gt;
+# -----------------------------
+# 4. Boxplot de l'absentéisme par âge
+plt.figure(figsize=(10,5))
+sns.boxplot(x='Age', y='Absenteeism time in hours', data=df, palette='Pastel1', hue='Age', legend=False)
+plt.title('Durée des absences selon l\'âge')
+plt.xlabel('Âge')
+plt.ylabel('Durée d\'absence (heures)')
 plt.show()
 
-&lt;span style='color:#696969; '&gt;# -----------------------------&lt;/span&gt;
-&lt;span style='color:#696969; '&gt;# 5. Corrélation entre variables numériques&lt;/span&gt;
-plt.figure(figsize&lt;span style='color:#808030; '&gt;=&lt;/span&gt;(&lt;span style='color:#008c00; '&gt;12&lt;/span&gt;&lt;span style='color:#808030; '&gt;,&lt;/span&gt;&lt;span style='color:#008c00; '&gt;8&lt;/span&gt;))
-numeric_cols &lt;span style='color:#808030; '&gt;=&lt;/span&gt; [&lt;span style='color:#0000e6; '&gt;'Transportation expense'&lt;/span&gt;&lt;span style='color:#808030; '&gt;,&lt;/span&gt; &lt;span style='color:#0000e6; '&gt;'Distance from Residence to Work'&lt;/span&gt;&lt;span style='color:#808030; '&gt;,&lt;/span&gt;
-                &lt;span style='color:#0000e6; '&gt;'Service time'&lt;/span&gt;&lt;span style='color:#808030; '&gt;,&lt;/span&gt; &lt;span style='color:#0000e6; '&gt;'Age'&lt;/span&gt;&lt;span style='color:#808030; '&gt;,&lt;/span&gt; &lt;span style='color:#0000e6; '&gt;'Work load Average/day '&lt;/span&gt;&lt;span style='color:#808030; '&gt;,&lt;/span&gt; &lt;span style='color:#0000e6; '&gt;'Hit target'&lt;/span&gt;&lt;span style='color:#808030; '&gt;,&lt;/span&gt;
-                &lt;span style='color:#0000e6; '&gt;'Absenteeism time in hours'&lt;/span&gt;]
-corr &lt;span style='color:#808030; '&gt;=&lt;/span&gt; df[numeric_cols].corr()
-sns.heatmap(corr&lt;span style='color:#808030; '&gt;,&lt;/span&gt; annot&lt;span style='color:#808030; '&gt;=&lt;/span&gt;True&lt;span style='color:#808030; '&gt;,&lt;/span&gt; cmap=&lt;span style='color:#0000e6; '&gt;'coolwarm'&lt;/span&gt;&lt;span style='color:#808030; '&gt;,&lt;/span&gt; fmt=&lt;span style='color:#0000e6; '&gt;".2f"&lt;/span&gt;)
-plt.title(&lt;span style='color:#0000e6; '&gt;'Matrice de corrélation des variables numériques'&lt;/span&gt;)
+# -----------------------------
+# 5. Corrélation entre variables numériques
+plt.figure(figsize=(12,8))
+numeric_cols = ['Transportation expense', 'Distance from Residence to Work',
+                'Service time', 'Age', 'Work load Average/day ', 'Hit target',
+                'Absenteeism time in hours']
+corr = df[numeric_cols].corr()
+sns.heatmap(corr, annot=True, cmap='coolwarm', fmt=".2f")
+plt.title('Matrice de corrélation des variables numériques')
 plt.show()
-&lt;!--Created using ToHTML.com on 2025-11-12 15:36:54 UTC --&gt;
+```
 
 ## Graphiques 
 
