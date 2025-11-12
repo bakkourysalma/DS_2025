@@ -1,14 +1,13 @@
 
-# BAKKOURY Salma 
-
-<img src="Photo salma.jpg" style="height:300px;margin-right:250px"/>
-
- # Étudiante en 4ᵉ année à l’ENCG Settat – filière Contrôle, Audit et Conseil .
 ## Thème du projet :
 **Analyse des facteurs d’absentéisme au travail à partir de la base de données “Absenteeism at Work”**
 
 ## Rapport sur la base de données “Absenteeism at Work”
+# BAKKOURY Salma 
 
+<img src="Photo salma.jpg" style="height:200px;margin-right:150px"/>
+
+ # Étudiante en 4ᵉ année à l’ENCG Settat – filière Contrôle, Audit et Conseil .
 ### 1. Introduction
 L’absentéisme au travail est un phénomène qui touche la plupart des entreprises et représente un véritable défi pour les responsables des ressources humaines. Il peut avoir des conséquences importantes sur la productivité, la qualité du service et le climat social au sein de l’organisation. Afin de mieux comprendre les causes de ce phénomène et d’en proposer une analyse objective, une base de données intitulée **“Absenteeism at Work”** a été constituée dans une entreprise de transport au **Brésil**, couvrant la période de **juillet 2007 à juillet 2010**.
 
