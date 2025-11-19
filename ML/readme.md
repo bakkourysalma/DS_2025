@@ -116,6 +116,8 @@ plt.show()
 
  <img src="Matrice.png" style="height:500px;margin-right:350px"/>
  
+ <img src="Matrice 2.png" style="height:500px;margin-right:350px"/>
+ 
 
 **Résultats :**
 
