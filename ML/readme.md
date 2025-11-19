@@ -1,3 +1,5 @@
+<img src="SETTAT.png" style="height:100px;margin-right:95px"/>  
+
 # 📊 Rapport d'Analyse Exploratoire du Dataset Wine Quality (White Wine)
 
 ## 1. Introduction
