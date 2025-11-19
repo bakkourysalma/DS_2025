@@ -92,6 +92,8 @@ plt.tight_layout()
 plt.show()
 ```
 
+ <img src="Matrice.png" style="height:500px;margin-right:350px"/>
+ 
 **Commentaires par variable :**
 
 * **Alcohol** : distribution légèrement asymétrique. Corrélé positivement avec la qualité.
