@@ -1,83 +1,134 @@
-# 📊 Rapport d’Analyse Exploratoire du Dataset Wine Quality
+# 📊 Rapport d'Analyse Exploratoire du Dataset Wine Quality (White Wine)
 
-## Introduction
+## 1. Introduction
 
-L’objectif de cette analyse est d’explorer le dataset *Wine Quality* de l’UCI Machine Learning Repository, composé de données physico-chimiques de vins blancs et d’un score de qualité attribué par des experts. À travers plusieurs visualisations (distribution de la qualité, histogrammes et matrice de corrélation), nous cherchons à comprendre les relations entre les variables et à identifier les facteurs influençant le plus la qualité du vin.
+Le dataset *Wine Quality* (vin blanc) provient de l'UCI Machine Learning Repository et contient des mesures physico-chimiques de vins blancs portugais ainsi qu'un score de qualité attribué par des experts.
 
-Cette analyse exploratoire constitue une étape essentielle avant la construction d’un modèle prédictif, car elle permet d’identifier les tendances, les valeurs extrêmes, les variables pertinentes et les dépendances entre les dimensions du dataset.
+L'objectif de cette analyse est de :
 
----
+- Explorer les données ;
+- Visualiser la distribution des variables ;
+- Identifier les variables les plus liées à la qualité ;
+- Détecter des tendances générales du dataset.
 
-## 1. Distribution de la qualité du vin
-
-Le graphique de distribution montre que :
-
-- La majorité des vins ont une qualité comprise entre **5 et 7**, avec un pic à **6**.
-- Les vins de très haute qualité (8–9) ou très basse qualité (3–4) sont rares.
-- La distribution est **déséquilibrée**, ce qui pourrait influencer les futurs modèles prédictifs.
-
-### ✔ Commentaire  
-Cette concentration autour de valeurs moyennes indique que le dataset contient peu d’exemples extrêmes. Cela limite les analyses fines sur les vins exceptionnels et nécessite une gestion du déséquilibre lors de la modélisation (ex. : repondération ou techniques de sur-échantillonnage).
+Cette analyse constitue une étape préalable essentielle avant toute modélisation de prédiction.
 
 ---
 
-## 2. Analyse des distributions des variables physico-chimiques
+## 2. Chargement et Préparation du Dataset
 
-Quatre variables ont été analysées via histogrammes :  
-- **Alcohol**  
-- **Volatile acidity**  
-- **Citric acid**  
-- **Residual sugar**
+```python
+import pandas as pd
+import numpy as np
 
-### 🔹 Alcohol  
-Distribution asymétrique, principalement entre 9 % et 12 %.  
-**Commentaire :** Associé positivement à la qualité. Les vins plus alcoolisés sont souvent mieux notés.
+link = "http://archive.ics.uci.edu/ml/machine-learning-databases/wine-quality/winequality-white.csv"
 
-### 🔹 Volatile Acidity  
-Concentrée à de faibles niveaux, avec quelques valeurs extrêmes.  
-**Commentaire :** Une acidité volatile élevée est un facteur qui dégrade fortement la qualité (goût vinaigré).
+df = pd.read_csv(link, header="infer", delimiter=";")
+print("\n========= Dataset summary ========= \n")
+df.info()
+print("\n========= A few first samples ========= \n")
+print(df.head())
 
-### 🔹 Citric Acid  
-Distribution centrée autour de 0.2 – 0.4 g/dm³.  
-**Commentaire :** Améliore la fraîcheur et contribue à la qualité du vin.
+X = df.drop("quality", axis=1)  # Colonnes features
+y = df["quality"]               # Variable cible
 
-### 🔹 Residual Sugar  
-Très forte asymétrie avec présence de valeurs extrêmement élevées.  
-**Commentaire :** Ce paramètre ne corrèle pas fortement avec la qualité mais reflète différentes typologies de vins.
+print("\n========= Wine Qualities ========= \n")
+print(y.value_counts())
+```
 
----
+**Commentaires :**
 
-## 3. Analyse de la matrice de corrélation
-
-La heatmap met en évidence les relations entre les variables et la qualité du vin.
-
-### 🔸 Corrélations positives avec la qualité :
-- **Alcohol (~ +0.44)** → meilleure variable prédictive.  
-- Légères corrélations avec **sulphates** et **citric acid**.
-
-### 🔸 Corrélations négatives :
-- **Density (~ –0.31)** → vins moins denses = meilleure qualité.  
-- **Chlorides (~ –0.20)**.  
-- **Volatile acidity (~ –0.19)** → très significative.
-
-### ✔ Commentaire  
-Ces corrélations montrent que :
-- Un vin léger, faiblement acide et avec un taux d’alcool plus élevé est généralement mieux noté.  
-- Certaines variables (pH, sucre résiduel) ont un impact assez faible, ce qui permet de concentrer les modèles sur les variables les plus explicatives.
+* Le dataset contient 4 898 observations et 12 colonnes (11 features + 1 target).
+* La variable cible *quality* varie généralement de 3 à 9.
+* La distribution des scores est déséquilibrée : les classes 5, 6 et 7 sont majoritaires.
 
 ---
 
-## Conclusion
+## 3. Visualisation des données
 
-Cette analyse exploratoire du dataset *Wine Quality* a permis de dégager plusieurs enseignements clés :
+### 3.1 Distribution de la qualité du vin
 
-1. La qualité du vin est principalement centrée autour de valeurs moyennes (5 à 7).
-2. Les distributions des variables physico-chimiques montrent des asymétries et la présence de valeurs extrêmes.
-3. Les variables **alcohol**, **density** et **volatile acidity** sont les plus fortement corrélées avec la qualité.
-4. Certaines caractéristiques ont un impact limité, ce qui simplifie le choix des variables pour la modélisation.
-5. Le dataset est déséquilibré, ce qui devra être pris en compte pour développer un modèle prédictif fiable.
+```python
+import matplotlib.pyplot as plt
+import seaborn as sns
 
-Ces résultats constituent une base solide pour poursuivre un travail de modélisation ou approfondir l’étude des facteurs influençant la qualité du vin.
+sns.set_style("whitegrid")
+
+plt.figure(figsize=(8,5))
+sns.countplot(x=y, hue=y, palette="viridis", legend=False)
+plt.title('Distribution of Wine Quality (Target Variable)')
+plt.xlabel('Quality Score')
+plt.ylabel('Number of Wines')
+plt.show()
+```
+
+**Analyse :**
+
+* Les scores les plus fréquents sont 5, 6 et 7.
+* Les vins de très bonne (8–9) ou très mauvaise qualité (3–4) sont rares.
+* Le dataset est légèrement déséquilibré, ce qui peut influencer les modèles prédictifs.
 
 ---
+
+### 3.2 Distribution de certaines variables sélectionnées
+
+```python
+selected_features = ['alcohol', 'volatile acidity', 'citric acid', 'residual sugar']
+
+plt.figure(figsize=(15,10))
+for i, col in enumerate(selected_features):
+    plt.subplot(2,2,i+1)
+    sns.histplot(X[col], kde=True, color='skyblue')
+    plt.title(f'Distribution of {col}')
+    plt.xlabel(col)
+    plt.ylabel('Frequency')
+plt.tight_layout()
+plt.show()
+```
+
+**Commentaires par variable :**
+
+* **Alcohol** : distribution légèrement asymétrique. Corrélé positivement avec la qualité.
+* **Volatile Acidity** : majoritairement faible. Corrélé négativement avec la qualité.
+* **Citric Acid** : valeurs centrées. Influence modérée.
+* **Residual Sugar** : forte asymétrie, peu d'impact direct sur la qualité.
+
+---
+
+### 3.3 Matrice de corrélation
+
+```python
+df_combined = pd.concat([X, y], axis=1)
+corr_matrix = df_combined.corr()
+
+plt.figure(figsize=(12,10))
+sns.heatmap(corr_matrix, annot=True, cmap='coolwarm', fmt=".2f", linewidths=.5)
+plt.title('Correlation Matrix of Wine Features and Quality')
+plt.show()
+```
+
+**Résultats :**
+
+* **Corrélations positives importantes** :
+  * Alcohol (~ +0.44) → variable la plus prédictive.
+  * Citric acid et sulphates (faibles mais positives).
+* **Corrélations négatives importantes** :
+  * Density (~ –0.31) → vins plus légers = meilleure qualité.
+  * Volatile Acidity (~ –0.19) → qualité dégradée.
+* **Variables peu corrélées** : pH, residual sugar, chlorides.
+
+**Conclusion partielle :**
+La qualité du vin est fortement influencée par l'alcool, la densité et l'acidité volatile.
+
+---
+
+## 4. Conclusion générale
+
+1. La variable cible est **centrée sur 5–7** et légèrement déséquilibrée.
+2. Les distributions des variables montrent des asymétries et quelques outliers.
+3. Les facteurs principaux influençant la qualité sont **alcohol**, **density** et **volatile acidity**.
+4. Certaines variables (pH, residual sugar, chlorides) ont un impact limité et peuvent être moins prioritaires pour la modélisation.
+5. Ces observations constituent une base solide pour appliquer un modèle de prédiction (Random Forest, SVM, Régression Linéaire).
+
+Cette analyse permet de mieux comprendre les facteurs déterminants de la qualité des vins et sert de point de départ pour la modélisation prédictive.
 
