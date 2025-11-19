@@ -91,8 +91,6 @@ for i, col in enumerate(selected_features):
 plt.tight_layout()
 plt.show()
 ```
-
- <img src="Matrice.png" style="height:500px;margin-right:350px"/>
  
 **Commentaires par variable :**
 
@@ -114,6 +112,10 @@ sns.heatmap(corr_matrix, annot=True, cmap='coolwarm', fmt=".2f", linewidths=.5)
 plt.title('Correlation Matrix of Wine Features and Quality')
 plt.show()
 ```
+
+
+ <img src="Matrice.png" style="height:500px;margin-right:350px"/>
+ 
 
 **Résultats :**
 
