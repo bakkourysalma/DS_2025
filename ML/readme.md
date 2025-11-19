@@ -1,6 +1,6 @@
 # 📊 Rapport d’Analyse Exploratoire du Dataset Wine Quality
 
-## 🟦 Introduction
+## Introduction
 
 L’objectif de cette analyse est d’explorer le dataset *Wine Quality* de l’UCI Machine Learning Repository, composé de données physico-chimiques de vins blancs et d’un score de qualité attribué par des experts. À travers plusieurs visualisations (distribution de la qualité, histogrammes et matrice de corrélation), nous cherchons à comprendre les relations entre les variables et à identifier les facteurs influençant le plus la qualité du vin.
 
@@ -8,7 +8,7 @@ Cette analyse exploratoire constitue une étape essentielle avant la constructio
 
 ---
 
-## 🟩 1. Distribution de la qualité du vin
+## 1. Distribution de la qualité du vin
 
 Le graphique de distribution montre que :
 
@@ -21,7 +21,7 @@ Cette concentration autour de valeurs moyennes indique que le dataset contient p
 
 ---
 
-## 🟩 2. Analyse des distributions des variables physico-chimiques
+## 2. Analyse des distributions des variables physico-chimiques
 
 Quatre variables ont été analysées via histogrammes :  
 - **Alcohol**  
@@ -47,7 +47,7 @@ Très forte asymétrie avec présence de valeurs extrêmement élevées.
 
 ---
 
-## 🟩 3. Analyse de la matrice de corrélation
+## 3. Analyse de la matrice de corrélation
 
 La heatmap met en évidence les relations entre les variables et la qualité du vin.
 
@@ -67,7 +67,7 @@ Ces corrélations montrent que :
 
 ---
 
-## 🟦 Conclusion
+## Conclusion
 
 Cette analyse exploratoire du dataset *Wine Quality* a permis de dégager plusieurs enseignements clés :
 
