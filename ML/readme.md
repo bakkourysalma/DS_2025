@@ -1,5 +1,9 @@
 <img src="SETTAT.png" style="height:100px;margin-right:95px"/>  
 
+# BAKKOURY Salma 
+
+<img src="Photo salma.jpg" style="height:200px;margin-right:150px"/>
+
 # 📊 Rapport d'Analyse Exploratoire du Dataset Wine Quality (White Wine)
 
 ## 1. Introduction
