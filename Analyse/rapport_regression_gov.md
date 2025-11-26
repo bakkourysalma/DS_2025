@@ -3,19 +3,6 @@
 
 ---
 
-## 📋 Table des matières
-
-1. [Introduction](#introduction)
-2. [Importation des bibliothèques](#importation)
-3. [Chargement des données](#chargement)
-4. [Nettoyage des données](#nettoyage)
-5. [Analyse exploratoire (EDA)](#eda)
-6. [Modélisation par régression linéaire](#modelisation)
-7. [Optimisation avec GridSearchCV](#tuning)
-8. [Modèles d'ensemble](#ensemble)
-9. [Mise en production](#production)
-10. [Conclusion](#conclusion)
-
 ---
 
 ## 1. Introduction {#introduction}
