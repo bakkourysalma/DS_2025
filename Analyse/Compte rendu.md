@@ -1,6 +1,11 @@
+<img src="SETTAT.png" style="height:100px;margin-right:95px"/>  
+
 # Rapport d'Analyse Approfondie du Comportement Client E-commerce
 
 **Auteur :** BAKKOURY SALMA  
+
+<img src="Photo salma.jpg" style="height:200px;margin-right:150px"/>
+
 **Date :** Novembre 2025  
 **Source des données :** Dataset Kaggle - E-commerce Customer Behavior and Sales Analysis (Turquie)
 
