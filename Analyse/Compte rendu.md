@@ -236,7 +236,7 @@ print(f"   • Revenus les plus élevés : {category_revenue.index[0]} (₺{cate
 print(f"   • Meilleure VMC : {category_aov.index[0]} (₺{category_aov.values[0]:.2f})")
 ```
 
-<img src="Graphe.png" style="height:200px;margin-right:100px"/>
+<img src="Graphe.png" style="height:500px;margin-right:350px"/>
 
 **Interprétation :** L'analyse des catégories de produits révèle une distribution relativement équilibrée des commandes entre les différentes catégories, suggérant un catalogue diversifié et attrayant pour différents segments de clientèle. La heatmap de performance permet d'identifier les catégories leaders et celles nécessitant une attention particulière. Les disparités entre le volume de commandes et les revenus générés indiquent que certaines catégories, bien que moins populaires en termes de volume, génèrent une valeur moyenne de commande plus élevée, ce qui pourrait refléter des produits premium ou à marge supérieure. Cette analyse multidimensionnelle aide à prioriser les investissements marketing et l'optimisation des stocks.
 
@@ -396,7 +396,7 @@ plt.show()
 print("✅ Analyse des séries temporelles terminée !")
 ```
 
-<img src="Graphe 2.png" style="height:200px;margin-right:100px"/>
+<img src="Graphe 2.png" style="height:500px;margin-right:350px"/>
 
 **Interprétation :** L'analyse temporelle des revenus révèle des patterns cycliques et des tendances de croissance importantes. Les fluctuations mensuelles peuvent être attribuées à des facteurs saisonniers, des campagnes promotionnelles ou des événements spéciaux. La ligne de tendance générale indique la direction globale de la performance commerciale sur la période étudiée. La comparaison trimestrielle permet d'identifier les périodes de haute et basse saison, informations cruciales pour la planification des stocks et des campagnes marketing. L'évolution de la valeur moyenne de commande et du nombre de clients actifs mensuels fournit des indicateurs clés sur la santé financière et la fidélisation client. Le tableau de croissance période-à-période quantifie précisément l'évolution des métriques principales, facilitant l'évaluation de la performance et la fixation d'objectifs futurs.
 
@@ -512,7 +512,7 @@ plt.show()
 print("✅ Analyse des remises terminée !")
 ```
 
-<img src="Graphe 3+.png" style="height:200px;margin-right:100px"/>
+<img src="Graphe 3+.png" style="height:500px;margin-right:350px"/>
 
 
 **Interprétation :** L'analyse de la stratégie de remise démontre l'impact significatif des promotions sur le comportement d'achat. La proportion de commandes bénéficiant de remises indique l'intensité de la stratégie promotionnelle. La distribution des montants et pourcentages de remise révèle les tactiques de pricing adoptées, avec une concentration autour de certains seuils psychologiques. La comparaison de la valeur moyenne de commande entre les transactions avec et sans remise permet d'évaluer l'efficacité des promotions pour stimuler les ventes. Si la VMC avec remise est supérieure, cela suggère que les remises encouragent l'achat de produits plus chers ou en quantité supérieure, validant ainsi la stratégie. À l'inverse, une VMC inférieure pourrait indiquer une érosion de marge nécessitant un réajustement. L'analyse par catégorie identifie les segments où les remises sont les plus généreuses, informant sur les stratégies de compétitivité par produit.
@@ -590,7 +590,7 @@ for idx, row in corr_df.head(5).iterrows():
     print(f"   • {row['Caractéristique 1']} ↔ {row['Caractéristique 2']}: {row['Corrélation']:.3f}")
 ```
 
-<img src="Graphe 4+.png" style="height:200px;margin-right:100px"/>
+<img src="Graphe 4+.png" style="height:500px;margin-right:350px"/>
 
 
 **Interprétation :** Les analyses de corrélation avancées révèlent les relations entre les différentes variables du dataset, permettant d'identifier les facteurs prédictifs et les dynamiques sous-jacentes du comportement d'achat. Les corrélations fortes, qu'elles soient positives ou négatives, indiquent des associations significatives entre variables. Par exemple, une corrélation élevée entre le montant total et le montant final est attendue et naturelle, tandis qu'une corrélation entre l'âge et les dépenses révélerait des patterns démographiques intéressants pour la segmentation client. Le nuage de points Prix-Quantité illustre les stratégies d'achat, montrant si les clients achètent en volume lorsque les prix sont bas. L'analyse Âge-Dépenses identifie les segments démographiques les plus rentables, guidant les efforts de ciblage marketing. Ces insights multivariés sont essentiels pour développer des modèles prédictifs et des stratégies personnalisées.
