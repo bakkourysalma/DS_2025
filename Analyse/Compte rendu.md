@@ -4,7 +4,7 @@
 
 **Auteur :** BAKKOURY SALMA  
 
-<img src="Photo salma.jpg" style="height:200px;margin-right:150px"/>
+<img src="Photo salma.jpg" style="height:100px;margin-right:150px"/>
 
 **Date :** Novembre 2025  
 **Source des données :** Dataset Kaggle - E-commerce Customer Behavior and Sales Analysis (Turquie)
