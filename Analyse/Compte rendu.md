@@ -1,5 +1,9 @@
 # Rapport d'Analyse Approfondie du Comportement Client E-commerce
 
+**Auteur :** BAKKOURY SALMA  
+**Date :** Novembre 2025  
+**Source des données :** Dataset Kaggle - E-commerce Customer Behavior and Sales Analysis (Turquie)
+
 ## Introduction
 
 Le commerce électronique connaît une croissance exponentielle à l'échelle mondiale, transformant radicalement les habitudes d'achat des consommateurs. Dans ce contexte hautement compétitif, la compréhension approfondie du comportement client devient un avantage stratégique crucial pour optimiser les performances commerciales et améliorer l'expérience utilisateur.
