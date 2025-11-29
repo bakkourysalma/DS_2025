@@ -580,14 +580,5 @@ for idx, row in corr_df.head(5).iterrows():
 
 ## Conclusion
 
-Cette analyse approfondie du comportement client e-commerce a permis d'extraire des insights précieux sur plusieurs dimensions critiques de la performance commerciale. Les principales conclusions peuvent être synthétisées comme suit :
-
-**Performance des catégories de produits :** Le dataset révèle une diversité de catégories avec des performances variables en termes de volume de commandes et de revenus générés. Certaines catégories, bien que moins volumineuses, affichent une valeur moyenne de commande supérieure, suggérant des opportunités de maximisation de marge par une stratégie de mix produit optimisée.
-
-**Tendances temporelles :** L'analyse longitudinale des revenus et des commandes montre des patterns saisonniers et des cycles de croissance identifiables. Ces informations sont cruciales pour anticiper les périodes de forte et faible activité, permettant une meilleure planification des ressources, des stocks et des campagnes marketing. Les métriques de croissance période-à-période quantifient l'évolution de la performance et valident ou invalident les stratégies mises en œuvre.
-
-**Efficacité des remises :** La stratégie promotionnelle apparaît comme un levier significatif pour stimuler les ventes. L'analyse comparative entre commandes avec et sans remise démontre l'impact des promotions sur la valeur de commande et la fréquence d'achat. Toutefois, une surveillance continue du taux de remise et de son impact sur la marge est nécessaire pour maintenir la rentabilité tout en restant compétitif.
-
-**Corrélations et insights multivariés :** Les relations identifiées entre variables telles que l'âge, le prix, la quantité et les dépenses fournissent une base solide pour la segmentation client et la personnalisation de l'offre. Ces patterns permettent de prédire les comportements futurs et d'optimiser les recommandations produits.
 
 En conclusion, cette analyse fournit une base factuelle robuste pour la prise de décision stratégique. Les recommandations issues de ces insights incluent : l'optimisation du mix produit en fonction de la rentabilité par catégorie, l'ajustement des campagnes promotionnelles selon les périodes identifiées comme plus réceptives, et le développement de stratégies de personnalisation basées sur les segments démographiques et comportementaux identifiés. La continuation de telles analyses avec des données actualisées et l'intégration de techniques d'apprentissage automatique permettraient d'affiner encore davantage la compréhension du comportement client et d'anticiper les tendances futures du marché e-commerce.
